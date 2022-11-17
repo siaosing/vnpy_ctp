@@ -1,5 +1,5 @@
 import sys
-from datetime import datetime
+from datetime import datetime, timedelta
 from time import sleep
 from typing import Dict, List, Tuple
 from pathlib import Path
@@ -315,6 +315,10 @@ class CtpMdApi(MdApi):
         dt: datetime = datetime.strptime(timestamp, "%Y%m%d %H:%M:%S.%f")
         dt: datetime = dt.replace(tzinfo=CHINA_TZ)
 
+        time_now = datetime.now(dt.tzinfo)
+        if abs(dt - time_now) > timedelta(minutes=10):
+            return
+
         tick: TickData = TickData(
             symbol=symbol,
             exchange=contract.exchange,
@@ -502,10 +506,12 @@ class CtpTdApi(TdApi):
         self.gateway.on_order(order)
 
         self.gateway.write_error("交易委托失败", error)
+        self.gateway.write_log(f"onRspOrderInsert: {symbol},{order.direction},{order.offset}, price={order.price}, volume={order.volume}, status={order.status},orderid={orderid}")
 
     def onRspOrderAction(self, data: dict, error: dict, reqid: int, last: bool) -> None:
         """委托撤单失败回报"""
         self.gateway.write_error("交易撤单失败", error)
+        self.gateway.write_log(f"onRspOrderAction: 撤单失败{data}")
 
     def onRspSettlementInfoConfirm(self, data: dict, error: dict, reqid: int, last: bool) -> None:
         """确认结算单回报"""
@@ -679,6 +685,7 @@ class CtpTdApi(TdApi):
         self.gateway.on_order(order)
 
         self.sysid_orderid_map[data["OrderSysID"]] = orderid
+        self.gateway.write_log(f"onRtnOrder: {symbol},{order.direction},{order.offset}, price={order.price}, volume={order.volume}, traded={order.traded}, status={order.status},orderid={orderid}")
 
     def onRtnTrade(self, data: dict) -> None:
         """成交数据推送"""
@@ -708,6 +715,7 @@ class CtpTdApi(TdApi):
             gateway_name=self.gateway_name
         )
         self.gateway.on_trade(trade)
+        self.gateway.write_log(f"onRtnTrade: {symbol},{trade.direction},{trade.offset},price={trade.price},volume={trade.volume},orderid={orderid}")
 
     def connect(
         self,
@@ -833,7 +841,11 @@ class CtpTdApi(TdApi):
         }
 
         self.reqid += 1
-        self.reqOrderAction(ctp_req, self.reqid)
+        n: int = self.reqOrderAction(ctp_req, self.reqid)
+        if n:
+            self.gateway.write_log(f"撤单请求发送失败，错误代码：{n}")
+            return ""
+        self.gateway.write_log(f"cancel_order: {req.symbol},req.orderid = {req.orderid}")
 
     def query_account(self) -> None:
         """查询资金"""
