@@ -298,7 +298,13 @@ class CtpMdApi(MdApi):
         # 过滤没有时间戳的异常行情数据
         if not data["UpdateTime"]:
             return
-
+        # 过滤成交量为0的行情数据
+        if not data["Volume"]:
+            return
+        # 过滤非交易时段tick
+        if not ('08:59:00' <= data["UpdateTime"] <= '11:30:00' or '13:00:00' <= data["UpdateTime"] <= '16:00:00'
+                or data["UpdateTime"] >= '20:59:00' or data["UpdateTime"] <= '02:30:00'):
+            return
         # 过滤还没有收到合约数据前的行情推送
         symbol: str = data["InstrumentID"]
         contract: ContractData = symbol_contract_map.get(symbol, None)
