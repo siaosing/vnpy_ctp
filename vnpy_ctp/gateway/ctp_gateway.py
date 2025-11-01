@@ -512,7 +512,8 @@ class CtpTdApi(TdApi):
         self.gateway.on_order(order)
 
         self.gateway.write_error("交易委托失败", error)
-        self.gateway.write_log(f"onRspOrderInsert: {symbol},{order.direction},{order.offset}, price={order.price}, volume={order.volume}, status={order.status},orderid={orderid}")
+        self.gateway.write_log(f"onRspOrderInsert: {symbol},{order.direction},{order.offset}, price = {order.price}, "
+                               f"volume = {order.volume}, status = {order.status}, orderid = {orderid}")
 
     def onRspOrderAction(self, data: dict, error: dict, reqid: int, last: bool) -> None:
         """委托撤单失败回报"""
@@ -691,7 +692,10 @@ class CtpTdApi(TdApi):
         self.gateway.on_order(order)
 
         self.sysid_orderid_map[data["OrderSysID"]] = orderid
-        self.gateway.write_log(f"onRtnOrder: {symbol},{order.direction},{order.offset}, price={order.price}, volume={order.volume}, traded={order.traded}, status={order.status},orderid={orderid}")
+        self.gateway.write_log(f"onRtnOrder: {symbol},{order.direction},{order.offset}, "
+                              f"price = {order.price}, volume = {order.volume}, "
+                              f"traded = {order.traded}, status = {order.status}, "
+                              f"orderid = {orderid}")
 
     def onRtnTrade(self, data: dict) -> None:
         """成交数据推送"""
@@ -721,7 +725,8 @@ class CtpTdApi(TdApi):
             gateway_name=self.gateway_name
         )
         self.gateway.on_trade(trade)
-        self.gateway.write_log(f"onRtnTrade: {symbol},{trade.direction},{trade.offset},price={trade.price},volume={trade.volume},orderid={orderid}")
+        self.gateway.write_log(f"onRtnTrade: {symbol}, {trade.direction},{trade.offset}, "
+                              f"price = {trade.price}, volume = {trade.volume},orderid = {orderid}")
 
     def connect(
         self,
