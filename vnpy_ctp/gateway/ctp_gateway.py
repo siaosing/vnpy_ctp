@@ -327,11 +327,6 @@ class CtpMdApi(MdApi):
         time_now = datetime.now(dt.tzinfo)
         if abs(dt - time_now) > timedelta(minutes=10):
             return
-
-        time_now = datetime.now(dt.tzinfo)
-        if abs(dt - time_now) > timedelta(minutes=10):
-            return
-
         tick: TickData = TickData(
             symbol=symbol,
             exchange=contract.exchange,
@@ -529,7 +524,7 @@ class CtpTdApi(TdApi):
         self.gateway.on_order(order)
 
         self.gateway.write_error("交易委托失败", error)
-        self.gateway.write_log(f"onRspOrderInsert: {symbol},{order.direction},{order.offset}, price = {order.price}, "
+        self.gateway.write_log(f"onRspOrderInsert: {symbol},{order.direction},{order.offset}, price = {order.price: g}, "
                                f"volume = {order.volume}, status = {order.status}, orderid = {orderid}")
 
     def onRspOrderAction(self, data: dict, error: dict, reqid: int, last: bool) -> None:
@@ -622,6 +617,10 @@ class CtpTdApi(TdApi):
         account.available = data["Available"]
 
         self.gateway.on_account(account)
+        if datetime.now().minute == 0 and datetime.now().second < 4:
+            self.gateway.write_log(f"onRspQryTradingAccount: accountid = {account.accountid},balance = {account.balance}, \
+                               available = {account.available},frozen = {account.frozen}, gateway_name = {account.gateway_name}")
+
 
     def onRspQryInstrument(self, data: dict, error: dict, reqid: int, last: bool) -> None:
         """合约查询回报"""
@@ -684,6 +683,10 @@ class CtpTdApi(TdApi):
         order_ref: str = data["OrderRef"]
         orderid: str = f"{frontid}_{sessionid}_{order_ref}"
 
+        if contract.exchange == Exchange.DCE:  # jxx add 20241223; in the morning, CTP pushes wrong InsertDate for DCE orders
+            current_date = datetime.today().strftime('%Y%m%d')
+            data['InsertDate'] = min(current_date,data['InsertDate'])
+
         status: Status = STATUS_CTP2VT.get(data["OrderStatus"], None)
         if not status:
             self.gateway.write_log(f"收到不支持的委托状态，委托号：{orderid}")
@@ -717,9 +720,9 @@ class CtpTdApi(TdApi):
 
         self.sysid_orderid_map[data["OrderSysID"]] = orderid
         self.gateway.write_log(f"onRtnOrder: {symbol},{order.direction},{order.offset}, "
-                              f"price = {order.price}, volume = {order.volume}, "
+                              f"price = {order.price: g}, volume = {order.volume}, "
                               f"traded = {order.traded}, status = {order.status}, "
-                              f"orderid = {orderid}")
+                              f"orderid = {orderid},ordertime = {dt}")
 
     def onRtnTrade(self, data: dict) -> None:
         """成交数据推送"""
@@ -731,6 +734,10 @@ class CtpTdApi(TdApi):
         contract: ContractData = symbol_contract_map[symbol]
 
         orderid: str = self.sysid_orderid_map[data["OrderSysID"]]
+        self.gateway.write_log(f"onRtnTrade: symbol={symbol},orderid={orderid},tradetime={data['TradeDate']} {data['TradeTime']}")
+        if contract.exchange in [Exchange.DCE, Exchange.CZCE]:  # jxx add 20241223;
+            current_date = datetime.today().strftime('%Y%m%d')
+            data['TradeDate'] = min(current_date,data['TradeDate'])
 
         timestamp: str = f"{data['TradeDate']} {data['TradeTime']}"
         dt: datetime = datetime.strptime(timestamp, "%Y%m%d %H:%M:%S")
@@ -748,9 +755,15 @@ class CtpTdApi(TdApi):
             datetime=dt,
             gateway_name=self.gateway_name
         )
-        self.gateway.on_trade(trade)
+        time_now = datetime.now(dt.tzinfo)
+        if abs(dt - time_now) < timedelta(minutes=10):
+            self.gateway.write_log("need push to self.gateway.on_trade")
+            self.gateway.on_trade(trade)
+        else:
+            self.gateway.write_log(f"need not push ******** {dt}, abs(dt - time_now) = {abs(dt - time_now)}")
+
         self.gateway.write_log(f"onRtnTrade: {symbol}, {trade.direction},{trade.offset}, "
-                              f"price = {trade.price}, volume = {trade.volume},orderid = {orderid}")
+                              f"price = {trade.price: g}, volume = {trade.volume},orderid = {orderid},tradetime = {dt}")
 
     def connect(
         self,
@@ -879,7 +892,7 @@ class CtpTdApi(TdApi):
         n: int = self.reqOrderAction(ctp_req, self.reqid)
         if n:
             self.gateway.write_log(f"撤单请求发送失败，错误代码：{n}")
-            return ""
+            return
         self.gateway.write_log(f"cancel_order: {req.symbol},req.orderid = {req.orderid}")
 
     def query_account(self) -> None:
