@@ -263,6 +263,7 @@ class CtpMdApi(MdApi):
         self.brokerid: str = ""
 
         self.current_date: str = datetime.now().strftime("%Y%m%d")
+        self.current_datetime: datetime = datetime.now().replace(tzinfo=CHINA_TZ)
 
     def onFrontConnected(self) -> None:
         """服务器连接成功回报"""
@@ -324,7 +325,8 @@ class CtpMdApi(MdApi):
         dt: datetime = datetime.strptime(timestamp, "%Y%m%d %H:%M:%S.%f")
         dt = dt.replace(tzinfo=CHINA_TZ)
 
-        time_now = datetime.now(dt.tzinfo)
+        # time_now = datetime.now(dt.tzinfo)
+        time_now = self.current_datetime
         if abs(dt - time_now) > timedelta(minutes=10):
             return
         tick: TickData = TickData(
@@ -420,6 +422,7 @@ class CtpMdApi(MdApi):
     def update_date(self) -> None:
         """更新当前日期"""
         self.current_date = datetime.now().strftime("%Y%m%d")
+        self.current_datetime = datetime.now().replace(tzinfo=CHINA_TZ)
 
 
 class CtpTdApi(TdApi):
