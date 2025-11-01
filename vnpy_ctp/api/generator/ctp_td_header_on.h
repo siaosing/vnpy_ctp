@@ -70,6 +70,8 @@ virtual void onRspQryInstrumentMarginRate(const dict &data, const dict &error, i
 
 virtual void onRspQryInstrumentCommissionRate(const dict &data, const dict &error, int reqid, bool last) {};
 
+virtual void onRspQryUserSession(const dict &data, const dict &error, int reqid, bool last) {};
+
 virtual void onRspQryExchange(const dict &data, const dict &error, int reqid, bool last) {};
 
 virtual void onRspQryProduct(const dict &data, const dict &error, int reqid, bool last) {};
@@ -257,4 +259,70 @@ virtual void onRspQryCombPromotionParam(const dict &data, const dict &error, int
 virtual void onRspQryRiskSettleInvstPosition(const dict &data, const dict &error, int reqid, bool last) {};
 
 virtual void onRspQryRiskSettleProductStatus(const dict &data, const dict &error, int reqid, bool last) {};
+
+virtual void onRspQrySPBMFutureParameter(const dict &data, const dict &error, int reqid, bool last) {};
+
+virtual void onRspQrySPBMOptionParameter(const dict &data, const dict &error, int reqid, bool last) {};
+
+virtual void onRspQrySPBMIntraParameter(const dict &data, const dict &error, int reqid, bool last) {};
+
+virtual void onRspQrySPBMInterParameter(const dict &data, const dict &error, int reqid, bool last) {};
+
+virtual void onRspQrySPBMPortfDefinition(const dict &data, const dict &error, int reqid, bool last) {};
+
+virtual void onRspQrySPBMInvestorPortfDef(const dict &data, const dict &error, int reqid, bool last) {};
+
+virtual void onRspQryInvestorPortfMarginRatio(const dict &data, const dict &error, int reqid, bool last) {};
+
+virtual void onRspQryInvestorProdSPBMDetail(const dict &data, const dict &error, int reqid, bool last) {};
+
+virtual void onRspQryInvestorCommoditySPMMMargin(const dict &data, const dict &error, int reqid, bool last) {};
+
+virtual void onRspQryInvestorCommodityGroupSPMMMargin(const dict &data, const dict &error, int reqid, bool last) {};
+
+virtual void onRspQrySPMMInstParam(const dict &data, const dict &error, int reqid, bool last) {};
+
+virtual void onRspQrySPMMProductParam(const dict &data, const dict &error, int reqid, bool last) {};
+
+virtual void onRspQrySPBMAddonInterParameter(const dict &data, const dict &error, int reqid, bool last) {};
+
+virtual void onRspQryRCAMSCombProductInfo(const dict &data, const dict &error, int reqid, bool last) {};
+
+virtual void onRspQryRCAMSInstrParameter(const dict &data, const dict &error, int reqid, bool last) {};
+
+virtual void onRspQryRCAMSIntraParameter(const dict &data, const dict &error, int reqid, bool last) {};
+
+virtual void onRspQryRCAMSInterParameter(const dict &data, const dict &error, int reqid, bool last) {};
+
+virtual void onRspQryRCAMSShortOptAdjustParam(const dict &data, const dict &error, int reqid, bool last) {};
+
+virtual void onRspQryRCAMSInvestorCombPosition(const dict &data, const dict &error, int reqid, bool last) {};
+
+virtual void onRspQryInvestorProdRCAMSMargin(const dict &data, const dict &error, int reqid, bool last) {};
+
+virtual void onRspQryRULEInstrParameter(const dict &data, const dict &error, int reqid, bool last) {};
+
+virtual void onRspQryRULEIntraParameter(const dict &data, const dict &error, int reqid, bool last) {};
+
+virtual void onRspQryRULEInterParameter(const dict &data, const dict &error, int reqid, bool last) {};
+
+virtual void onRspQryInvestorProdRULEMargin(const dict &data, const dict &error, int reqid, bool last) {};
+
+virtual void onRspQryInvestorPortfSetting(const dict &data, const dict &error, int reqid, bool last) {};
+
+virtual void onRspQryInvestorInfoCommRec(const dict &data, const dict &error, int reqid, bool last) {};
+
+virtual void onRspQryCombLeg(const dict &data, const dict &error, int reqid, bool last) {};
+
+virtual void onRspOffsetSetting(const dict &data, const dict &error, int reqid, bool last) {};
+
+virtual void onRspCancelOffsetSetting(const dict &data, const dict &error, int reqid, bool last) {};
+
+virtual void onRtnOffsetSetting(const dict &data) {};
+
+virtual void onErrRtnOffsetSetting(const dict &data, const dict &error) {};
+
+virtual void onErrRtnCancelOffsetSetting(const dict &data, const dict &error) {};
+
+virtual void onRspQryOffsetSetting(const dict &data, const dict &error, int reqid, bool last) {};
 

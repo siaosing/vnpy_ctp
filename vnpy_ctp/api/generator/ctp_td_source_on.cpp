@@ -430,6 +430,18 @@ void onRspQryInstrumentCommissionRate(const dict &data, const dict &error, int r
 	}
 };
 
+void onRspQryUserSession(const dict &data, const dict &error, int reqid, bool last) override
+{
+	try
+	{
+		PYBIND11_OVERLOAD(void, TdApi, onRspQryUserSession, data, error, reqid, last);
+	}
+	catch (const error_already_set &e)
+	{
+		cout << e.what() << endl;
+	}
+};
+
 void onRspQryExchange(const dict &data, const dict &error, int reqid, bool last) override
 {
 	try
@@ -1551,6 +1563,402 @@ void onRspQryRiskSettleProductStatus(const dict &data, const dict &error, int re
 	try
 	{
 		PYBIND11_OVERLOAD(void, TdApi, onRspQryRiskSettleProductStatus, data, error, reqid, last);
+	}
+	catch (const error_already_set &e)
+	{
+		cout << e.what() << endl;
+	}
+};
+
+void onRspQrySPBMFutureParameter(const dict &data, const dict &error, int reqid, bool last) override
+{
+	try
+	{
+		PYBIND11_OVERLOAD(void, TdApi, onRspQrySPBMFutureParameter, data, error, reqid, last);
+	}
+	catch (const error_already_set &e)
+	{
+		cout << e.what() << endl;
+	}
+};
+
+void onRspQrySPBMOptionParameter(const dict &data, const dict &error, int reqid, bool last) override
+{
+	try
+	{
+		PYBIND11_OVERLOAD(void, TdApi, onRspQrySPBMOptionParameter, data, error, reqid, last);
+	}
+	catch (const error_already_set &e)
+	{
+		cout << e.what() << endl;
+	}
+};
+
+void onRspQrySPBMIntraParameter(const dict &data, const dict &error, int reqid, bool last) override
+{
+	try
+	{
+		PYBIND11_OVERLOAD(void, TdApi, onRspQrySPBMIntraParameter, data, error, reqid, last);
+	}
+	catch (const error_already_set &e)
+	{
+		cout << e.what() << endl;
+	}
+};
+
+void onRspQrySPBMInterParameter(const dict &data, const dict &error, int reqid, bool last) override
+{
+	try
+	{
+		PYBIND11_OVERLOAD(void, TdApi, onRspQrySPBMInterParameter, data, error, reqid, last);
+	}
+	catch (const error_already_set &e)
+	{
+		cout << e.what() << endl;
+	}
+};
+
+void onRspQrySPBMPortfDefinition(const dict &data, const dict &error, int reqid, bool last) override
+{
+	try
+	{
+		PYBIND11_OVERLOAD(void, TdApi, onRspQrySPBMPortfDefinition, data, error, reqid, last);
+	}
+	catch (const error_already_set &e)
+	{
+		cout << e.what() << endl;
+	}
+};
+
+void onRspQrySPBMInvestorPortfDef(const dict &data, const dict &error, int reqid, bool last) override
+{
+	try
+	{
+		PYBIND11_OVERLOAD(void, TdApi, onRspQrySPBMInvestorPortfDef, data, error, reqid, last);
+	}
+	catch (const error_already_set &e)
+	{
+		cout << e.what() << endl;
+	}
+};
+
+void onRspQryInvestorPortfMarginRatio(const dict &data, const dict &error, int reqid, bool last) override
+{
+	try
+	{
+		PYBIND11_OVERLOAD(void, TdApi, onRspQryInvestorPortfMarginRatio, data, error, reqid, last);
+	}
+	catch (const error_already_set &e)
+	{
+		cout << e.what() << endl;
+	}
+};
+
+void onRspQryInvestorProdSPBMDetail(const dict &data, const dict &error, int reqid, bool last) override
+{
+	try
+	{
+		PYBIND11_OVERLOAD(void, TdApi, onRspQryInvestorProdSPBMDetail, data, error, reqid, last);
+	}
+	catch (const error_already_set &e)
+	{
+		cout << e.what() << endl;
+	}
+};
+
+void onRspQryInvestorCommoditySPMMMargin(const dict &data, const dict &error, int reqid, bool last) override
+{
+	try
+	{
+		PYBIND11_OVERLOAD(void, TdApi, onRspQryInvestorCommoditySPMMMargin, data, error, reqid, last);
+	}
+	catch (const error_already_set &e)
+	{
+		cout << e.what() << endl;
+	}
+};
+
+void onRspQryInvestorCommodityGroupSPMMMargin(const dict &data, const dict &error, int reqid, bool last) override
+{
+	try
+	{
+		PYBIND11_OVERLOAD(void, TdApi, onRspQryInvestorCommodityGroupSPMMMargin, data, error, reqid, last);
+	}
+	catch (const error_already_set &e)
+	{
+		cout << e.what() << endl;
+	}
+};
+
+void onRspQrySPMMInstParam(const dict &data, const dict &error, int reqid, bool last) override
+{
+	try
+	{
+		PYBIND11_OVERLOAD(void, TdApi, onRspQrySPMMInstParam, data, error, reqid, last);
+	}
+	catch (const error_already_set &e)
+	{
+		cout << e.what() << endl;
+	}
+};
+
+void onRspQrySPMMProductParam(const dict &data, const dict &error, int reqid, bool last) override
+{
+	try
+	{
+		PYBIND11_OVERLOAD(void, TdApi, onRspQrySPMMProductParam, data, error, reqid, last);
+	}
+	catch (const error_already_set &e)
+	{
+		cout << e.what() << endl;
+	}
+};
+
+void onRspQrySPBMAddonInterParameter(const dict &data, const dict &error, int reqid, bool last) override
+{
+	try
+	{
+		PYBIND11_OVERLOAD(void, TdApi, onRspQrySPBMAddonInterParameter, data, error, reqid, last);
+	}
+	catch (const error_already_set &e)
+	{
+		cout << e.what() << endl;
+	}
+};
+
+void onRspQryRCAMSCombProductInfo(const dict &data, const dict &error, int reqid, bool last) override
+{
+	try
+	{
+		PYBIND11_OVERLOAD(void, TdApi, onRspQryRCAMSCombProductInfo, data, error, reqid, last);
+	}
+	catch (const error_already_set &e)
+	{
+		cout << e.what() << endl;
+	}
+};
+
+void onRspQryRCAMSInstrParameter(const dict &data, const dict &error, int reqid, bool last) override
+{
+	try
+	{
+		PYBIND11_OVERLOAD(void, TdApi, onRspQryRCAMSInstrParameter, data, error, reqid, last);
+	}
+	catch (const error_already_set &e)
+	{
+		cout << e.what() << endl;
+	}
+};
+
+void onRspQryRCAMSIntraParameter(const dict &data, const dict &error, int reqid, bool last) override
+{
+	try
+	{
+		PYBIND11_OVERLOAD(void, TdApi, onRspQryRCAMSIntraParameter, data, error, reqid, last);
+	}
+	catch (const error_already_set &e)
+	{
+		cout << e.what() << endl;
+	}
+};
+
+void onRspQryRCAMSInterParameter(const dict &data, const dict &error, int reqid, bool last) override
+{
+	try
+	{
+		PYBIND11_OVERLOAD(void, TdApi, onRspQryRCAMSInterParameter, data, error, reqid, last);
+	}
+	catch (const error_already_set &e)
+	{
+		cout << e.what() << endl;
+	}
+};
+
+void onRspQryRCAMSShortOptAdjustParam(const dict &data, const dict &error, int reqid, bool last) override
+{
+	try
+	{
+		PYBIND11_OVERLOAD(void, TdApi, onRspQryRCAMSShortOptAdjustParam, data, error, reqid, last);
+	}
+	catch (const error_already_set &e)
+	{
+		cout << e.what() << endl;
+	}
+};
+
+void onRspQryRCAMSInvestorCombPosition(const dict &data, const dict &error, int reqid, bool last) override
+{
+	try
+	{
+		PYBIND11_OVERLOAD(void, TdApi, onRspQryRCAMSInvestorCombPosition, data, error, reqid, last);
+	}
+	catch (const error_already_set &e)
+	{
+		cout << e.what() << endl;
+	}
+};
+
+void onRspQryInvestorProdRCAMSMargin(const dict &data, const dict &error, int reqid, bool last) override
+{
+	try
+	{
+		PYBIND11_OVERLOAD(void, TdApi, onRspQryInvestorProdRCAMSMargin, data, error, reqid, last);
+	}
+	catch (const error_already_set &e)
+	{
+		cout << e.what() << endl;
+	}
+};
+
+void onRspQryRULEInstrParameter(const dict &data, const dict &error, int reqid, bool last) override
+{
+	try
+	{
+		PYBIND11_OVERLOAD(void, TdApi, onRspQryRULEInstrParameter, data, error, reqid, last);
+	}
+	catch (const error_already_set &e)
+	{
+		cout << e.what() << endl;
+	}
+};
+
+void onRspQryRULEIntraParameter(const dict &data, const dict &error, int reqid, bool last) override
+{
+	try
+	{
+		PYBIND11_OVERLOAD(void, TdApi, onRspQryRULEIntraParameter, data, error, reqid, last);
+	}
+	catch (const error_already_set &e)
+	{
+		cout << e.what() << endl;
+	}
+};
+
+void onRspQryRULEInterParameter(const dict &data, const dict &error, int reqid, bool last) override
+{
+	try
+	{
+		PYBIND11_OVERLOAD(void, TdApi, onRspQryRULEInterParameter, data, error, reqid, last);
+	}
+	catch (const error_already_set &e)
+	{
+		cout << e.what() << endl;
+	}
+};
+
+void onRspQryInvestorProdRULEMargin(const dict &data, const dict &error, int reqid, bool last) override
+{
+	try
+	{
+		PYBIND11_OVERLOAD(void, TdApi, onRspQryInvestorProdRULEMargin, data, error, reqid, last);
+	}
+	catch (const error_already_set &e)
+	{
+		cout << e.what() << endl;
+	}
+};
+
+void onRspQryInvestorPortfSetting(const dict &data, const dict &error, int reqid, bool last) override
+{
+	try
+	{
+		PYBIND11_OVERLOAD(void, TdApi, onRspQryInvestorPortfSetting, data, error, reqid, last);
+	}
+	catch (const error_already_set &e)
+	{
+		cout << e.what() << endl;
+	}
+};
+
+void onRspQryInvestorInfoCommRec(const dict &data, const dict &error, int reqid, bool last) override
+{
+	try
+	{
+		PYBIND11_OVERLOAD(void, TdApi, onRspQryInvestorInfoCommRec, data, error, reqid, last);
+	}
+	catch (const error_already_set &e)
+	{
+		cout << e.what() << endl;
+	}
+};
+
+void onRspQryCombLeg(const dict &data, const dict &error, int reqid, bool last) override
+{
+	try
+	{
+		PYBIND11_OVERLOAD(void, TdApi, onRspQryCombLeg, data, error, reqid, last);
+	}
+	catch (const error_already_set &e)
+	{
+		cout << e.what() << endl;
+	}
+};
+
+void onRspOffsetSetting(const dict &data, const dict &error, int reqid, bool last) override
+{
+	try
+	{
+		PYBIND11_OVERLOAD(void, TdApi, onRspOffsetSetting, data, error, reqid, last);
+	}
+	catch (const error_already_set &e)
+	{
+		cout << e.what() << endl;
+	}
+};
+
+void onRspCancelOffsetSetting(const dict &data, const dict &error, int reqid, bool last) override
+{
+	try
+	{
+		PYBIND11_OVERLOAD(void, TdApi, onRspCancelOffsetSetting, data, error, reqid, last);
+	}
+	catch (const error_already_set &e)
+	{
+		cout << e.what() << endl;
+	}
+};
+
+void onRtnOffsetSetting(const dict &data) override
+{
+	try
+	{
+		PYBIND11_OVERLOAD(void, TdApi, onRtnOffsetSetting, data);
+	}
+	catch (const error_already_set &e)
+	{
+		cout << e.what() << endl;
+	}
+};
+
+void onErrRtnOffsetSetting(const dict &data, const dict &error) override
+{
+	try
+	{
+		PYBIND11_OVERLOAD(void, TdApi, onErrRtnOffsetSetting, data, error);
+	}
+	catch (const error_already_set &e)
+	{
+		cout << e.what() << endl;
+	}
+};
+
+void onErrRtnCancelOffsetSetting(const dict &data, const dict &error) override
+{
+	try
+	{
+		PYBIND11_OVERLOAD(void, TdApi, onErrRtnCancelOffsetSetting, data, error);
+	}
+	catch (const error_already_set &e)
+	{
+		cout << e.what() << endl;
+	}
+};
+
+void onRspQryOffsetSetting(const dict &data, const dict &error, int reqid, bool last) override
+{
+	try
+	{
+		PYBIND11_OVERLOAD(void, TdApi, onRspQryOffsetSetting, data, error, reqid, last);
 	}
 	catch (const error_already_set &e)
 	{

@@ -34,6 +34,11 @@ CThostFtdcRspUserLoginField = {
     "FFEXTime": "string",
     "INETime": "string",
     "SysVersion": "string",
+    "GFEXTime": "string",
+    "LoginDRIdentityID": "int",
+    "UserDRIdentityID": "int",
+    "LastLoginTime": "string",
+    "ReserveInfo": "string",
 }
 
 CThostFtdcUserLogoutField = {
@@ -269,6 +274,8 @@ CThostFtdcTraderField = {
     "InstallCount": "int",
     "BrokerID": "string",
     "OrderCancelAlg": "char",
+    "TradeInstallCount": "int",
+    "MDInstallCount": "int",
 }
 
 CThostFtdcInvestorField = {
@@ -376,6 +383,7 @@ CThostFtdcTradingAccountField = {
     "BizType": "char",
     "FrozenSwap": "double",
     "RemainSwap": "double",
+    "OptionValue": "double",
 }
 
 CThostFtdcInvestorPositionField = {
@@ -429,6 +437,7 @@ CThostFtdcInvestorPositionField = {
     "TasPosition": "int",
     "TasPositionCost": "double",
     "InstrumentID": "string",
+    "OptionValue": "double",
 }
 
 CThostFtdcInstrumentMarginRateField = {
@@ -735,6 +744,8 @@ CThostFtdcInputOrderField = {
     "MacAddress": "string",
     "InstrumentID": "string",
     "IPAddress": "string",
+    "OrderMemo": "string",
+    "SessionReqSeq": "int",
 }
 
 CThostFtdcOrderField = {
@@ -804,6 +815,8 @@ CThostFtdcOrderField = {
     "InstrumentID": "string",
     "ExchangeInstID": "string",
     "IPAddress": "string",
+    "OrderMemo": "string",
+    "SessionReqSeq": "int",
 }
 
 CThostFtdcExchangeOrderField = {
@@ -886,6 +899,8 @@ CThostFtdcInputOrderActionField = {
     "MacAddress": "string",
     "InstrumentID": "string",
     "IPAddress": "string",
+    "OrderMemo": "string",
+    "SessionReqSeq": "int",
 }
 
 CThostFtdcOrderActionField = {
@@ -920,6 +935,8 @@ CThostFtdcOrderActionField = {
     "MacAddress": "string",
     "InstrumentID": "string",
     "IPAddress": "string",
+    "OrderMemo": "string",
+    "SessionReqSeq": "int",
 }
 
 CThostFtdcExchangeOrderActionField = {
@@ -1066,6 +1083,7 @@ CThostFtdcSyncDepositField = {
     "CurrencyID": "string",
     "IsFromSopt": "int",
     "TradingPassword": "string",
+    "IsSecAgentTranfer": "int",
 }
 
 CThostFtdcSyncFundMortgageField = {
@@ -1163,6 +1181,7 @@ CThostFtdcSyncingTradingAccountField = {
     "SpecProductExchangeMargin": "double",
     "FrozenSwap": "double",
     "RemainSwap": "double",
+    "OptionValue": "double",
 }
 
 CThostFtdcSyncingInvestorPositionField = {
@@ -1422,6 +1441,7 @@ CThostFtdcQryDepthMarketDataField = {
     "reserve1": "string",
     "ExchangeID": "string",
     "InstrumentID": "string",
+    "ProductClass": "char",
 }
 
 CThostFtdcQryBrokerUserField = {
@@ -1988,6 +2008,9 @@ CThostFtdcInputQuoteField = {
     "InstrumentID": "string",
     "IPAddress": "string",
     "ReplaceSysID": "string",
+    "TimeCondition": "char",
+    "OrderMemo": "string",
+    "SessionReqSeq": "int",
 }
 
 CThostFtdcInputQuoteActionField = {
@@ -2009,6 +2032,8 @@ CThostFtdcInputQuoteActionField = {
     "MacAddress": "string",
     "InstrumentID": "string",
     "IPAddress": "string",
+    "OrderMemo": "string",
+    "SessionReqSeq": "int",
 }
 
 CThostFtdcQuoteField = {
@@ -2066,6 +2091,9 @@ CThostFtdcQuoteField = {
     "ExchangeInstID": "string",
     "IPAddress": "string",
     "ReplaceSysID": "string",
+    "TimeCondition": "char",
+    "OrderMemo": "string",
+    "SessionReqSeq": "int",
 }
 
 CThostFtdcQuoteActionField = {
@@ -2098,6 +2126,8 @@ CThostFtdcQuoteActionField = {
     "MacAddress": "string",
     "InstrumentID": "string",
     "IPAddress": "string",
+    "OrderMemo": "string",
+    "SessionReqSeq": "int",
 }
 
 CThostFtdcQryQuoteField = {
@@ -2149,6 +2179,7 @@ CThostFtdcExchangeQuoteField = {
     "MacAddress": "string",
     "ExchangeInstID": "string",
     "IPAddress": "string",
+    "TimeCondition": "char",
 }
 
 CThostFtdcQryExchangeQuoteField = {
@@ -3152,6 +3183,8 @@ CThostFtdcBrokerUserEventField = {
     "InvestorID": "string",
     "reserve1": "string",
     "InstrumentID": "string",
+    "DRIdentityID": "int",
+    "TradingDay": "string",
 }
 
 CThostFtdcQryContractBankField = {
@@ -3398,6 +3431,8 @@ CThostFtdcErrOrderField = {
     "MacAddress": "string",
     "InstrumentID": "string",
     "IPAddress": "string",
+    "OrderMemo": "string",
+    "SessionReqSeq": "int",
 }
 
 CThostFtdcErrorConditionalOrderField = {
@@ -3510,6 +3545,8 @@ CThostFtdcErrOrderActionField = {
     "ErrorMsg": "string",
     "InstrumentID": "string",
     "IPAddress": "string",
+    "OrderMemo": "string",
+    "SessionReqSeq": "int",
 }
 
 CThostFtdcQryExchangeSequenceField = {
@@ -5146,6 +5183,7 @@ CThostFtdcDepartmentUserField = {
 
 CThostFtdcQueryFreqField = {
     "QueryFreq": "int",
+    "FTDPkgFreq": "int",
 }
 
 CThostFtdcAuthForbiddenIPField = {
@@ -5212,7 +5250,7 @@ CThostFtdcCombPromotionParamField = {
     "Xparameter": "double",
 }
 
-CThostFtdcReqUserLoginSCField = {
+CThostFtdcReqUserLoginSMField = {
     "TradingDay": "string",
     "BrokerID": "string",
     "UserID": "string",
@@ -5222,11 +5260,14 @@ CThostFtdcReqUserLoginSCField = {
     "ProtocolInfo": "string",
     "MacAddress": "string",
     "OneTimePassword": "string",
-    "ClientIPAddress": "string",
+    "reserve1": "string",
     "LoginRemark": "string",
     "ClientIPPort": "int",
+    "ClientIPAddress": "string",
+    "BrokerName": "string",
     "AuthCode": "string",
     "AppID": "string",
+    "PIN": "string",
 }
 
 CThostFtdcQryRiskSettleInvstPositionField = {
@@ -5417,6 +5458,7 @@ CThostFtdcSyncDeltaTradingAccountField = {
     "SpecProductExchangeMargin": "double",
     "FrozenSwap": "double",
     "RemainSwap": "double",
+    "OptionValue": "double",
     "SyncDeltaSequenceNo": "int",
 }
 
@@ -5636,5 +5678,1292 @@ CThostFtdcSyncDeltaEWarrantOffsetField = {
     "Volume": "int",
     "ActionDirection": "char",
     "SyncDeltaSequenceNo": "int",
+}
+
+CThostFtdcSPBMFutureParameterField = {
+    "TradingDay": "string",
+    "ExchangeID": "string",
+    "InstrumentID": "string",
+    "ProdFamilyCode": "string",
+    "Cvf": "int",
+    "TimeRange": "char",
+    "MarginRate": "double",
+    "LockRateX": "double",
+    "AddOnRate": "double",
+    "PreSettlementPrice": "double",
+    "AddOnLockRateX2": "double",
+}
+
+CThostFtdcSPBMOptionParameterField = {
+    "TradingDay": "string",
+    "ExchangeID": "string",
+    "InstrumentID": "string",
+    "ProdFamilyCode": "string",
+    "Cvf": "int",
+    "DownPrice": "double",
+    "Delta": "double",
+    "SlimiDelta": "double",
+    "PreSettlementPrice": "double",
+}
+
+CThostFtdcSPBMIntraParameterField = {
+    "TradingDay": "string",
+    "ExchangeID": "string",
+    "ProdFamilyCode": "string",
+    "IntraRateY": "double",
+    "AddOnIntraRateY2": "double",
+}
+
+CThostFtdcSPBMInterParameterField = {
+    "TradingDay": "string",
+    "ExchangeID": "string",
+    "SpreadId": "int",
+    "InterRateZ": "double",
+    "Leg1ProdFamilyCode": "string",
+    "Leg2ProdFamilyCode": "string",
+}
+
+CThostFtdcSyncSPBMParameterEndField = {
+    "TradingDay": "string",
+}
+
+CThostFtdcQrySPBMFutureParameterField = {
+    "ExchangeID": "string",
+    "InstrumentID": "string",
+    "ProdFamilyCode": "string",
+}
+
+CThostFtdcQrySPBMOptionParameterField = {
+    "ExchangeID": "string",
+    "InstrumentID": "string",
+    "ProdFamilyCode": "string",
+}
+
+CThostFtdcQrySPBMIntraParameterField = {
+    "ExchangeID": "string",
+    "ProdFamilyCode": "string",
+}
+
+CThostFtdcQrySPBMInterParameterField = {
+    "ExchangeID": "string",
+    "Leg1ProdFamilyCode": "string",
+    "Leg2ProdFamilyCode": "string",
+}
+
+CThostFtdcSPBMPortfDefinitionField = {
+    "ExchangeID": "string",
+    "PortfolioDefID": "int",
+    "ProdFamilyCode": "string",
+    "IsSPBM": "int",
+}
+
+CThostFtdcSPBMInvestorPortfDefField = {
+    "ExchangeID": "string",
+    "BrokerID": "string",
+    "InvestorID": "string",
+    "PortfolioDefID": "int",
+}
+
+CThostFtdcInvestorPortfMarginRatioField = {
+    "InvestorRange": "char",
+    "BrokerID": "string",
+    "InvestorID": "string",
+    "ExchangeID": "string",
+    "MarginRatio": "double",
+    "ProductGroupID": "string",
+}
+
+CThostFtdcQrySPBMPortfDefinitionField = {
+    "ExchangeID": "string",
+    "PortfolioDefID": "int",
+    "ProdFamilyCode": "string",
+}
+
+CThostFtdcQrySPBMInvestorPortfDefField = {
+    "ExchangeID": "string",
+    "BrokerID": "string",
+    "InvestorID": "string",
+}
+
+CThostFtdcQryInvestorPortfMarginRatioField = {
+    "BrokerID": "string",
+    "InvestorID": "string",
+    "ExchangeID": "string",
+    "ProductGroupID": "string",
+}
+
+CThostFtdcInvestorProdSPBMDetailField = {
+    "ExchangeID": "string",
+    "BrokerID": "string",
+    "InvestorID": "string",
+    "ProdFamilyCode": "string",
+    "IntraInstrMargin": "double",
+    "BCollectingMargin": "double",
+    "SCollectingMargin": "double",
+    "IntraProdMargin": "double",
+    "NetMargin": "double",
+    "InterProdMargin": "double",
+    "SingleMargin": "double",
+    "AddOnMargin": "double",
+    "DeliveryMargin": "double",
+    "CallOptionMinRisk": "double",
+    "PutOptionMinRisk": "double",
+    "OptionMinRisk": "double",
+    "OptionValueOffset": "double",
+    "OptionRoyalty": "double",
+    "RealOptionValueOffset": "double",
+    "Margin": "double",
+    "ExchMargin": "double",
+}
+
+CThostFtdcQryInvestorProdSPBMDetailField = {
+    "ExchangeID": "string",
+    "BrokerID": "string",
+    "InvestorID": "string",
+    "ProdFamilyCode": "string",
+}
+
+CThostFtdcPortfTradeParamSettingField = {
+    "ExchangeID": "string",
+    "BrokerID": "string",
+    "InvestorID": "string",
+    "Portfolio": "char",
+    "IsActionVerify": "int",
+    "IsCloseVerify": "int",
+}
+
+CThostFtdcInvestorTradingRightField = {
+    "BrokerID": "string",
+    "InvestorID": "string",
+    "InvstTradingRight": "char",
+}
+
+CThostFtdcMortgageParamField = {
+    "BrokerID": "string",
+    "AccountID": "string",
+    "MortgageBalance": "double",
+    "CheckMortgageRatio": "int",
+}
+
+CThostFtdcWithDrawParamField = {
+    "BrokerID": "string",
+    "AccountID": "string",
+    "WithDrawParamID": "char",
+    "WithDrawParamValue": "string",
+}
+
+CThostFtdcThostUserFunctionField = {
+    "BrokerID": "string",
+    "UserID": "string",
+    "ThostFunctionCode": "int",
+}
+
+CThostFtdcQryThostUserFunctionField = {
+    "BrokerID": "string",
+    "UserID": "string",
+}
+
+CThostFtdcSPBMAddOnInterParameterField = {
+    "TradingDay": "string",
+    "ExchangeID": "string",
+    "SpreadId": "int",
+    "AddOnInterRateZ2": "double",
+    "Leg1ProdFamilyCode": "string",
+    "Leg2ProdFamilyCode": "string",
+}
+
+CThostFtdcQrySPBMAddOnInterParameterField = {
+    "ExchangeID": "string",
+    "Leg1ProdFamilyCode": "string",
+    "Leg2ProdFamilyCode": "string",
+}
+
+CThostFtdcQryInvestorCommoditySPMMMarginField = {
+    "BrokerID": "string",
+    "InvestorID": "string",
+    "CommodityID": "string",
+}
+
+CThostFtdcQryInvestorCommodityGroupSPMMMarginField = {
+    "BrokerID": "string",
+    "InvestorID": "string",
+    "CommodityGroupID": "string",
+}
+
+CThostFtdcQrySPMMInstParamField = {
+    "InstrumentID": "string",
+}
+
+CThostFtdcQrySPMMProductParamField = {
+    "ProductID": "string",
+}
+
+CThostFtdcInvestorCommoditySPMMMarginField = {
+    "ExchangeID": "string",
+    "BrokerID": "string",
+    "InvestorID": "string",
+    "CommodityID": "string",
+    "MarginBeforeDiscount": "double",
+    "MarginNoDiscount": "double",
+    "LongPosRisk": "double",
+    "LongOpenFrozenRisk": "double",
+    "LongCloseFrozenRisk": "double",
+    "ShortPosRisk": "double",
+    "ShortOpenFrozenRisk": "double",
+    "ShortCloseFrozenRisk": "double",
+    "IntraCommodityRate": "double",
+    "OptionDiscountRate": "double",
+    "PosDiscount": "double",
+    "OpenFrozenDiscount": "double",
+    "NetRisk": "double",
+    "CloseFrozenMargin": "double",
+    "FrozenCommission": "double",
+    "Commission": "double",
+    "FrozenCash": "double",
+    "CashIn": "double",
+    "StrikeFrozenMargin": "double",
+}
+
+CThostFtdcInvestorCommodityGroupSPMMMarginField = {
+    "ExchangeID": "string",
+    "BrokerID": "string",
+    "InvestorID": "string",
+    "CommodityGroupID": "string",
+    "MarginBeforeDiscount": "double",
+    "MarginNoDiscount": "double",
+    "LongRisk": "double",
+    "ShortRisk": "double",
+    "CloseFrozenMargin": "double",
+    "InterCommodityRate": "double",
+    "MiniMarginRatio": "double",
+    "AdjustRatio": "double",
+    "IntraCommodityDiscount": "double",
+    "InterCommodityDiscount": "double",
+    "ExchMargin": "double",
+    "InvestorMargin": "double",
+    "FrozenCommission": "double",
+    "Commission": "double",
+    "FrozenCash": "double",
+    "CashIn": "double",
+    "StrikeFrozenMargin": "double",
+}
+
+CThostFtdcSPMMInstParamField = {
+    "ExchangeID": "string",
+    "InstrumentID": "string",
+    "InstMarginCalID": "char",
+    "CommodityID": "string",
+    "CommodityGroupID": "string",
+}
+
+CThostFtdcSPMMProductParamField = {
+    "ExchangeID": "string",
+    "ProductID": "string",
+    "CommodityID": "string",
+    "CommodityGroupID": "string",
+}
+
+CThostFtdcQryTraderAssignField = {
+    "TraderID": "string",
+}
+
+CThostFtdcTraderAssignField = {
+    "BrokerID": "string",
+    "ExchangeID": "string",
+    "TraderID": "string",
+    "ParticipantID": "string",
+    "DRIdentityID": "int",
+}
+
+CThostFtdcInvestorInfoCntSettingField = {
+    "ExchangeID": "string",
+    "BrokerID": "string",
+    "InvestorID": "string",
+    "ProductID": "string",
+    "IsCalInfoComm": "int",
+    "IsLimitInfoMax": "int",
+    "InfoMaxLimit": "int",
+}
+
+CThostFtdcRCAMSCombProductInfoField = {
+    "TradingDay": "string",
+    "ExchangeID": "string",
+    "ProductID": "string",
+    "CombProductID": "string",
+    "ProductGroupID": "string",
+}
+
+CThostFtdcRCAMSInstrParameterField = {
+    "TradingDay": "string",
+    "ExchangeID": "string",
+    "ProductID": "string",
+    "HedgeRate": "double",
+}
+
+CThostFtdcRCAMSIntraParameterField = {
+    "TradingDay": "string",
+    "ExchangeID": "string",
+    "CombProductID": "string",
+    "HedgeRate": "double",
+}
+
+CThostFtdcRCAMSInterParameterField = {
+    "TradingDay": "string",
+    "ExchangeID": "string",
+    "ProductGroupID": "string",
+    "Priority": "int",
+    "CreditRate": "double",
+    "CombProduct1": "string",
+    "CombProduct2": "string",
+}
+
+CThostFtdcRCAMSShortOptAdjustParamField = {
+    "TradingDay": "string",
+    "ExchangeID": "string",
+    "CombProductID": "string",
+    "HedgeFlag": "char",
+    "AdjustValue": "double",
+}
+
+CThostFtdcRCAMSInvestorCombPositionField = {
+    "ExchangeID": "string",
+    "BrokerID": "string",
+    "InvestorID": "string",
+    "InstrumentID": "string",
+    "HedgeFlag": "char",
+    "PosiDirection": "char",
+    "CombInstrumentID": "string",
+    "LegID": "int",
+    "ExchangeInstID": "string",
+    "TotalAmt": "int",
+    "ExchMargin": "double",
+    "Margin": "double",
+}
+
+CThostFtdcInvestorProdRCAMSMarginField = {
+    "ExchangeID": "string",
+    "BrokerID": "string",
+    "InvestorID": "string",
+    "CombProductID": "string",
+    "HedgeFlag": "char",
+    "ProductGroupID": "string",
+    "RiskBeforeDiscount": "double",
+    "IntraInstrRisk": "double",
+    "BPosRisk": "double",
+    "SPosRisk": "double",
+    "IntraProdRisk": "double",
+    "NetRisk": "double",
+    "InterProdRisk": "double",
+    "ShortOptRiskAdj": "double",
+    "OptionRoyalty": "double",
+    "MMSACloseFrozenMargin": "double",
+    "CloseCombFrozenMargin": "double",
+    "CloseFrozenMargin": "double",
+    "MMSAOpenFrozenMargin": "double",
+    "DeliveryOpenFrozenMargin": "double",
+    "OpenFrozenMargin": "double",
+    "UseFrozenMargin": "double",
+    "MMSAExchMargin": "double",
+    "DeliveryExchMargin": "double",
+    "CombExchMargin": "double",
+    "ExchMargin": "double",
+    "UseMargin": "double",
+}
+
+CThostFtdcQryRCAMSCombProductInfoField = {
+    "ProductID": "string",
+    "CombProductID": "string",
+    "ProductGroupID": "string",
+}
+
+CThostFtdcQryRCAMSInstrParameterField = {
+    "ProductID": "string",
+}
+
+CThostFtdcQryRCAMSIntraParameterField = {
+    "CombProductID": "string",
+}
+
+CThostFtdcQryRCAMSInterParameterField = {
+    "ProductGroupID": "string",
+    "CombProduct1": "string",
+    "CombProduct2": "string",
+}
+
+CThostFtdcQryRCAMSShortOptAdjustParamField = {
+    "CombProductID": "string",
+}
+
+CThostFtdcQryRCAMSInvestorCombPositionField = {
+    "BrokerID": "string",
+    "InvestorID": "string",
+    "InstrumentID": "string",
+    "CombInstrumentID": "string",
+}
+
+CThostFtdcQryInvestorProdRCAMSMarginField = {
+    "BrokerID": "string",
+    "InvestorID": "string",
+    "CombProductID": "string",
+    "ProductGroupID": "string",
+}
+
+CThostFtdcRULEInstrParameterField = {
+    "TradingDay": "string",
+    "ExchangeID": "string",
+    "InstrumentID": "string",
+    "InstrumentClass": "char",
+    "StdInstrumentID": "string",
+    "BSpecRatio": "double",
+    "SSpecRatio": "double",
+    "BHedgeRatio": "double",
+    "SHedgeRatio": "double",
+    "BAddOnMargin": "double",
+    "SAddOnMargin": "double",
+    "CommodityGroupID": "int",
+}
+
+CThostFtdcRULEIntraParameterField = {
+    "TradingDay": "string",
+    "ExchangeID": "string",
+    "ProdFamilyCode": "string",
+    "StdInstrumentID": "string",
+    "StdInstrMargin": "double",
+    "UsualIntraRate": "double",
+    "DeliveryIntraRate": "double",
+}
+
+CThostFtdcRULEInterParameterField = {
+    "TradingDay": "string",
+    "ExchangeID": "string",
+    "SpreadId": "int",
+    "InterRate": "double",
+    "Leg1ProdFamilyCode": "string",
+    "Leg2ProdFamilyCode": "string",
+    "Leg1PropFactor": "int",
+    "Leg2PropFactor": "int",
+    "CommodityGroupID": "int",
+    "CommodityGroupName": "string",
+}
+
+CThostFtdcQryRULEInstrParameterField = {
+    "ExchangeID": "string",
+    "InstrumentID": "string",
+}
+
+CThostFtdcQryRULEIntraParameterField = {
+    "ExchangeID": "string",
+    "ProdFamilyCode": "string",
+}
+
+CThostFtdcQryRULEInterParameterField = {
+    "ExchangeID": "string",
+    "Leg1ProdFamilyCode": "string",
+    "Leg2ProdFamilyCode": "string",
+    "CommodityGroupID": "int",
+}
+
+CThostFtdcInvestorProdRULEMarginField = {
+    "ExchangeID": "string",
+    "BrokerID": "string",
+    "InvestorID": "string",
+    "ProdFamilyCode": "string",
+    "InstrumentClass": "char",
+    "CommodityGroupID": "int",
+    "BStdPosition": "double",
+    "SStdPosition": "double",
+    "BStdOpenFrozen": "double",
+    "SStdOpenFrozen": "double",
+    "BStdCloseFrozen": "double",
+    "SStdCloseFrozen": "double",
+    "IntraProdStdPosition": "double",
+    "NetStdPosition": "double",
+    "InterProdStdPosition": "double",
+    "SingleStdPosition": "double",
+    "IntraProdMargin": "double",
+    "InterProdMargin": "double",
+    "SingleMargin": "double",
+    "NonCombMargin": "double",
+    "AddOnMargin": "double",
+    "ExchMargin": "double",
+    "AddOnFrozenMargin": "double",
+    "OpenFrozenMargin": "double",
+    "CloseFrozenMargin": "double",
+    "Margin": "double",
+    "FrozenMargin": "double",
+}
+
+CThostFtdcQryInvestorProdRULEMarginField = {
+    "ExchangeID": "string",
+    "BrokerID": "string",
+    "InvestorID": "string",
+    "ProdFamilyCode": "string",
+    "CommodityGroupID": "int",
+}
+
+CThostFtdcSyncDeltaSPBMPortfDefinitionField = {
+    "ExchangeID": "string",
+    "PortfolioDefID": "int",
+    "ProdFamilyCode": "string",
+    "IsSPBM": "int",
+    "ActionDirection": "char",
+    "SyncDeltaSequenceNo": "int",
+}
+
+CThostFtdcSyncDeltaSPBMInvstPortfDefField = {
+    "ExchangeID": "string",
+    "BrokerID": "string",
+    "InvestorID": "string",
+    "PortfolioDefID": "int",
+    "ActionDirection": "char",
+    "SyncDeltaSequenceNo": "int",
+}
+
+CThostFtdcSyncDeltaSPBMFutureParameterField = {
+    "TradingDay": "string",
+    "ExchangeID": "string",
+    "InstrumentID": "string",
+    "ProdFamilyCode": "string",
+    "Cvf": "int",
+    "TimeRange": "char",
+    "MarginRate": "double",
+    "LockRateX": "double",
+    "AddOnRate": "double",
+    "PreSettlementPrice": "double",
+    "AddOnLockRateX2": "double",
+    "ActionDirection": "char",
+    "SyncDeltaSequenceNo": "int",
+}
+
+CThostFtdcSyncDeltaSPBMOptionParameterField = {
+    "TradingDay": "string",
+    "ExchangeID": "string",
+    "InstrumentID": "string",
+    "ProdFamilyCode": "string",
+    "Cvf": "int",
+    "DownPrice": "double",
+    "Delta": "double",
+    "SlimiDelta": "double",
+    "PreSettlementPrice": "double",
+    "ActionDirection": "char",
+    "SyncDeltaSequenceNo": "int",
+}
+
+CThostFtdcSyncDeltaSPBMIntraParameterField = {
+    "TradingDay": "string",
+    "ExchangeID": "string",
+    "ProdFamilyCode": "string",
+    "IntraRateY": "double",
+    "AddOnIntraRateY2": "double",
+    "ActionDirection": "char",
+    "SyncDeltaSequenceNo": "int",
+}
+
+CThostFtdcSyncDeltaSPBMInterParameterField = {
+    "TradingDay": "string",
+    "ExchangeID": "string",
+    "SpreadId": "int",
+    "InterRateZ": "double",
+    "Leg1ProdFamilyCode": "string",
+    "Leg2ProdFamilyCode": "string",
+    "ActionDirection": "char",
+    "SyncDeltaSequenceNo": "int",
+}
+
+CThostFtdcSyncDeltaSPBMAddOnInterParamField = {
+    "TradingDay": "string",
+    "ExchangeID": "string",
+    "SpreadId": "int",
+    "AddOnInterRateZ2": "double",
+    "Leg1ProdFamilyCode": "string",
+    "Leg2ProdFamilyCode": "string",
+    "ActionDirection": "char",
+    "SyncDeltaSequenceNo": "int",
+}
+
+CThostFtdcSyncDeltaSPMMInstParamField = {
+    "ExchangeID": "string",
+    "InstrumentID": "string",
+    "InstMarginCalID": "char",
+    "CommodityID": "string",
+    "CommodityGroupID": "string",
+    "ActionDirection": "char",
+    "SyncDeltaSequenceNo": "int",
+}
+
+CThostFtdcSyncDeltaSPMMProductParamField = {
+    "ExchangeID": "string",
+    "ProductID": "string",
+    "CommodityID": "string",
+    "CommodityGroupID": "string",
+    "ActionDirection": "char",
+    "SyncDeltaSequenceNo": "int",
+}
+
+CThostFtdcSyncDeltaInvestorSPMMModelField = {
+    "ExchangeID": "string",
+    "BrokerID": "string",
+    "InvestorID": "string",
+    "SPMMModelID": "string",
+    "ActionDirection": "char",
+    "SyncDeltaSequenceNo": "int",
+}
+
+CThostFtdcSyncDeltaSPMMModelParamField = {
+    "ExchangeID": "string",
+    "SPMMModelID": "string",
+    "CommodityGroupID": "string",
+    "IntraCommodityRate": "double",
+    "InterCommodityRate": "double",
+    "OptionDiscountRate": "double",
+    "MiniMarginRatio": "double",
+    "ActionDirection": "char",
+    "SyncDeltaSequenceNo": "int",
+}
+
+CThostFtdcSyncDeltaRCAMSCombProdInfoField = {
+    "TradingDay": "string",
+    "ExchangeID": "string",
+    "ProductID": "string",
+    "CombProductID": "string",
+    "ProductGroupID": "string",
+    "ActionDirection": "char",
+    "SyncDeltaSequenceNo": "int",
+}
+
+CThostFtdcSyncDeltaRCAMSInstrParameterField = {
+    "TradingDay": "string",
+    "ExchangeID": "string",
+    "ProductID": "string",
+    "HedgeRate": "double",
+    "ActionDirection": "char",
+    "SyncDeltaSequenceNo": "int",
+}
+
+CThostFtdcSyncDeltaRCAMSIntraParameterField = {
+    "TradingDay": "string",
+    "ExchangeID": "string",
+    "CombProductID": "string",
+    "HedgeRate": "double",
+    "ActionDirection": "char",
+    "SyncDeltaSequenceNo": "int",
+}
+
+CThostFtdcSyncDeltaRCAMSInterParameterField = {
+    "TradingDay": "string",
+    "ExchangeID": "string",
+    "ProductGroupID": "string",
+    "Priority": "int",
+    "CreditRate": "double",
+    "CombProduct1": "string",
+    "CombProduct2": "string",
+    "ActionDirection": "char",
+    "SyncDeltaSequenceNo": "int",
+}
+
+CThostFtdcSyncDeltaRCAMSSOptAdjParamField = {
+    "TradingDay": "string",
+    "ExchangeID": "string",
+    "CombProductID": "string",
+    "HedgeFlag": "char",
+    "AdjustValue": "double",
+    "ActionDirection": "char",
+    "SyncDeltaSequenceNo": "int",
+}
+
+CThostFtdcSyncDeltaRCAMSCombRuleDtlField = {
+    "TradingDay": "string",
+    "ExchangeID": "string",
+    "ProdGroup": "string",
+    "RuleId": "string",
+    "Priority": "int",
+    "HedgeFlag": "char",
+    "CombMargin": "double",
+    "ExchangeInstID": "string",
+    "LegID": "int",
+    "LegInstrumentID": "string",
+    "Direction": "char",
+    "LegMultiple": "int",
+    "ActionDirection": "char",
+    "SyncDeltaSequenceNo": "int",
+}
+
+CThostFtdcSyncDeltaRCAMSInvstCombPosField = {
+    "ExchangeID": "string",
+    "BrokerID": "string",
+    "InvestorID": "string",
+    "InstrumentID": "string",
+    "HedgeFlag": "char",
+    "PosiDirection": "char",
+    "CombInstrumentID": "string",
+    "LegID": "int",
+    "ExchangeInstID": "string",
+    "TotalAmt": "int",
+    "ExchMargin": "double",
+    "Margin": "double",
+    "ActionDirection": "char",
+    "SyncDeltaSequenceNo": "int",
+}
+
+CThostFtdcSyncDeltaRULEInstrParameterField = {
+    "TradingDay": "string",
+    "ExchangeID": "string",
+    "InstrumentID": "string",
+    "InstrumentClass": "char",
+    "StdInstrumentID": "string",
+    "BSpecRatio": "double",
+    "SSpecRatio": "double",
+    "BHedgeRatio": "double",
+    "SHedgeRatio": "double",
+    "BAddOnMargin": "double",
+    "SAddOnMargin": "double",
+    "CommodityGroupID": "int",
+    "ActionDirection": "char",
+    "SyncDeltaSequenceNo": "int",
+}
+
+CThostFtdcSyncDeltaRULEIntraParameterField = {
+    "TradingDay": "string",
+    "ExchangeID": "string",
+    "ProdFamilyCode": "string",
+    "StdInstrumentID": "string",
+    "StdInstrMargin": "double",
+    "UsualIntraRate": "double",
+    "DeliveryIntraRate": "double",
+    "ActionDirection": "char",
+    "SyncDeltaSequenceNo": "int",
+}
+
+CThostFtdcSyncDeltaRULEInterParameterField = {
+    "TradingDay": "string",
+    "ExchangeID": "string",
+    "SpreadId": "int",
+    "InterRate": "double",
+    "Leg1ProdFamilyCode": "string",
+    "Leg2ProdFamilyCode": "string",
+    "Leg1PropFactor": "int",
+    "Leg2PropFactor": "int",
+    "CommodityGroupID": "int",
+    "CommodityGroupName": "string",
+    "ActionDirection": "char",
+    "SyncDeltaSequenceNo": "int",
+}
+
+CThostFtdcIpAddrParamField = {
+    "BrokerID": "string",
+    "Address": "string",
+    "DRIdentityID": "int",
+    "DRIdentityName": "string",
+    "AddrSrvMode": "char",
+    "AddrVer": "char",
+    "AddrNo": "int",
+    "AddrName": "string",
+    "IsSM": "int",
+    "IsLocalAddr": "int",
+    "Remark": "string",
+    "Site": "string",
+    "NetOperator": "string",
+}
+
+CThostFtdcQryIpAddrParamField = {
+    "BrokerID": "string",
+}
+
+CThostFtdcTGIpAddrParamField = {
+    "BrokerID": "string",
+    "UserID": "string",
+    "Address": "string",
+    "DRIdentityID": "int",
+    "DRIdentityName": "string",
+    "AddrSrvMode": "char",
+    "AddrVer": "char",
+    "AddrNo": "int",
+    "AddrName": "string",
+    "IsSM": "int",
+    "IsLocalAddr": "int",
+    "Remark": "string",
+    "Site": "string",
+    "NetOperator": "string",
+}
+
+CThostFtdcQryTGIpAddrParamField = {
+    "BrokerID": "string",
+    "UserID": "string",
+    "AppID": "string",
+}
+
+CThostFtdcTGSessionQryStatusField = {
+    "LastQryFreq": "int",
+    "QryStatus": "char",
+}
+
+CThostFtdcLocalAddrConfigField = {
+    "BrokerID": "string",
+    "PeerAddr": "string",
+    "NetMask": "string",
+    "DRIdentityID": "int",
+    "LocalAddress": "string",
+}
+
+CThostFtdcQryLocalAddrConfigField = {
+    "BrokerID": "string",
+}
+
+CThostFtdcReqQueryBankAccountBySecField = {
+    "TradeCode": "string",
+    "BankID": "string",
+    "BankBranchID": "string",
+    "BrokerID": "string",
+    "BrokerBranchID": "string",
+    "TradeDate": "string",
+    "TradeTime": "string",
+    "BankSerial": "string",
+    "TradingDay": "string",
+    "PlateSerial": "int",
+    "LastFragment": "char",
+    "SessionID": "int",
+    "CustomerName": "string",
+    "IdCardType": "char",
+    "IdentifiedCardNo": "string",
+    "CustType": "char",
+    "BankAccount": "string",
+    "BankPassWord": "string",
+    "AccountID": "string",
+    "Password": "string",
+    "FutureSerial": "int",
+    "InstallID": "int",
+    "UserID": "string",
+    "VerifyCertNoFlag": "char",
+    "CurrencyID": "string",
+    "Digest": "string",
+    "BankAccType": "char",
+    "DeviceID": "string",
+    "BankSecuAccType": "char",
+    "BrokerIDByBank": "string",
+    "BankSecuAcc": "string",
+    "BankPwdFlag": "char",
+    "SecuPwdFlag": "char",
+    "OperNo": "string",
+    "RequestID": "int",
+    "TID": "int",
+    "LongCustomerName": "string",
+    "DRIdentityID": "int",
+    "SecFutureSerial": "int",
+}
+
+CThostFtdcRspQueryBankAccountBySecField = {
+    "TradeCode": "string",
+    "BankID": "string",
+    "BankBranchID": "string",
+    "BrokerID": "string",
+    "BrokerBranchID": "string",
+    "TradeDate": "string",
+    "TradeTime": "string",
+    "BankSerial": "string",
+    "TradingDay": "string",
+    "PlateSerial": "int",
+    "LastFragment": "char",
+    "SessionID": "int",
+    "CustomerName": "string",
+    "IdCardType": "char",
+    "IdentifiedCardNo": "string",
+    "CustType": "char",
+    "BankAccount": "string",
+    "BankPassWord": "string",
+    "AccountID": "string",
+    "Password": "string",
+    "FutureSerial": "int",
+    "InstallID": "int",
+    "UserID": "string",
+    "VerifyCertNoFlag": "char",
+    "CurrencyID": "string",
+    "Digest": "string",
+    "BankAccType": "char",
+    "DeviceID": "string",
+    "BankSecuAccType": "char",
+    "BrokerIDByBank": "string",
+    "BankSecuAcc": "string",
+    "BankPwdFlag": "char",
+    "SecuPwdFlag": "char",
+    "OperNo": "string",
+    "RequestID": "int",
+    "TID": "int",
+    "BankUseAmount": "double",
+    "BankFetchAmount": "double",
+    "LongCustomerName": "string",
+    "DRIdentityID": "int",
+    "SecFutureSerial": "int",
+}
+
+CThostFtdcReqTransferBySecField = {
+    "TradeCode": "string",
+    "BankID": "string",
+    "BankBranchID": "string",
+    "BrokerID": "string",
+    "BrokerBranchID": "string",
+    "TradeDate": "string",
+    "TradeTime": "string",
+    "BankSerial": "string",
+    "TradingDay": "string",
+    "PlateSerial": "int",
+    "LastFragment": "char",
+    "SessionID": "int",
+    "CustomerName": "string",
+    "IdCardType": "char",
+    "IdentifiedCardNo": "string",
+    "CustType": "char",
+    "BankAccount": "string",
+    "BankPassWord": "string",
+    "AccountID": "string",
+    "Password": "string",
+    "InstallID": "int",
+    "FutureSerial": "int",
+    "UserID": "string",
+    "VerifyCertNoFlag": "char",
+    "CurrencyID": "string",
+    "TradeAmount": "double",
+    "FutureFetchAmount": "double",
+    "FeePayFlag": "char",
+    "CustFee": "double",
+    "BrokerFee": "double",
+    "Message": "string",
+    "Digest": "string",
+    "BankAccType": "char",
+    "DeviceID": "string",
+    "BankSecuAccType": "char",
+    "BrokerIDByBank": "string",
+    "BankSecuAcc": "string",
+    "BankPwdFlag": "char",
+    "SecuPwdFlag": "char",
+    "OperNo": "string",
+    "RequestID": "int",
+    "TID": "int",
+    "TransferStatus": "char",
+    "LongCustomerName": "string",
+    "DRIdentityID": "int",
+    "SecFutureSerial": "int",
+}
+
+CThostFtdcRspTransferBySecField = {
+    "TradeCode": "string",
+    "BankID": "string",
+    "BankBranchID": "string",
+    "BrokerID": "string",
+    "BrokerBranchID": "string",
+    "TradeDate": "string",
+    "TradeTime": "string",
+    "BankSerial": "string",
+    "TradingDay": "string",
+    "PlateSerial": "int",
+    "LastFragment": "char",
+    "SessionID": "int",
+    "CustomerName": "string",
+    "IdCardType": "char",
+    "IdentifiedCardNo": "string",
+    "CustType": "char",
+    "BankAccount": "string",
+    "BankPassWord": "string",
+    "AccountID": "string",
+    "Password": "string",
+    "InstallID": "int",
+    "FutureSerial": "int",
+    "UserID": "string",
+    "VerifyCertNoFlag": "char",
+    "CurrencyID": "string",
+    "TradeAmount": "double",
+    "FutureFetchAmount": "double",
+    "FeePayFlag": "char",
+    "CustFee": "double",
+    "BrokerFee": "double",
+    "Message": "string",
+    "Digest": "string",
+    "BankAccType": "char",
+    "DeviceID": "string",
+    "BankSecuAccType": "char",
+    "BrokerIDByBank": "string",
+    "BankSecuAcc": "string",
+    "BankPwdFlag": "char",
+    "SecuPwdFlag": "char",
+    "OperNo": "string",
+    "RequestID": "int",
+    "TID": "int",
+    "TransferStatus": "char",
+    "ErrorID": "int",
+    "ErrorMsg": "string",
+    "LongCustomerName": "string",
+    "DRIdentityID": "int",
+    "SecFutureSerial": "int",
+}
+
+CThostFtdcNotifyQueryFutureAccountBySecField = {
+    "TradeCode": "string",
+    "BankID": "string",
+    "BankBranchID": "string",
+    "BrokerID": "string",
+    "BrokerBranchID": "string",
+    "TradeDate": "string",
+    "TradeTime": "string",
+    "BankSerial": "string",
+    "TradingDay": "string",
+    "PlateSerial": "int",
+    "LastFragment": "char",
+    "SessionID": "int",
+    "CustomerName": "string",
+    "IdCardType": "char",
+    "IdentifiedCardNo": "string",
+    "CustType": "char",
+    "BankAccount": "string",
+    "BankPassWord": "string",
+    "AccountID": "string",
+    "Password": "string",
+    "FutureSerial": "int",
+    "InstallID": "int",
+    "UserID": "string",
+    "VerifyCertNoFlag": "char",
+    "CurrencyID": "string",
+    "Digest": "string",
+    "BankAccType": "char",
+    "DeviceID": "string",
+    "BankSecuAccType": "char",
+    "BrokerIDByBank": "string",
+    "BankSecuAcc": "string",
+    "BankPwdFlag": "char",
+    "SecuPwdFlag": "char",
+    "OperNo": "string",
+    "RequestID": "int",
+    "TID": "int",
+    "BankUseAmount": "double",
+    "BankFetchAmount": "double",
+    "ErrorID": "int",
+    "ErrorMsg": "string",
+    "LongCustomerName": "string",
+    "DRIdentityID": "int",
+    "SecFutureSerial": "int",
+}
+
+CThostFtdcExitEmergencyField = {
+    "BrokerID": "string",
+}
+
+CThostFtdcInvestorPortfMarginModelField = {
+    "BrokerID": "string",
+    "InvestorID": "string",
+    "MarginModelID": "string",
+}
+
+CThostFtdcInvestorPortfSettingField = {
+    "ExchangeID": "string",
+    "BrokerID": "string",
+    "InvestorID": "string",
+    "HedgeFlag": "char",
+    "UsePortf": "int",
+}
+
+CThostFtdcQryInvestorPortfSettingField = {
+    "ExchangeID": "string",
+    "BrokerID": "string",
+    "InvestorID": "string",
+}
+
+CThostFtdcUserPasswordUpdateFromSecField = {
+    "BrokerID": "string",
+    "UserID": "string",
+    "OldPassword": "string",
+    "NewPassword": "string",
+    "FromSec": "int",
+}
+
+CThostFtdcSettlementInfoConfirmFromSecField = {
+    "BrokerID": "string",
+    "InvestorID": "string",
+    "ConfirmDate": "string",
+    "ConfirmTime": "string",
+    "FromSec": "int",
+}
+
+CThostFtdcTradingAccountPasswordUpdateFromSecField = {
+    "BrokerID": "string",
+    "AccountID": "string",
+    "OldPassword": "string",
+    "NewPassword": "string",
+    "CurrencyID": "string",
+    "FromSec": "int",
+}
+
+CThostFtdcRiskForbiddenRightField = {
+    "BrokerID": "string",
+    "InvestorID": "string",
+    "InstrumentID": "string",
+    "UserID": "string",
+}
+
+CThostFtdcInvestorInfoCommRecField = {
+    "ExchangeID": "string",
+    "BrokerID": "string",
+    "InvestorID": "string",
+    "InstrumentID": "string",
+    "OrderCount": "int",
+    "OrderActionCount": "int",
+    "ForQuoteCnt": "int",
+    "InfoComm": "double",
+    "IsOptSeries": "int",
+    "ProductID": "string",
+    "InfoCnt": "int",
+}
+
+CThostFtdcQryInvestorInfoCommRecField = {
+    "InvestorID": "string",
+    "InstrumentID": "string",
+    "BrokerID": "string",
+}
+
+CThostFtdcCombLegField = {
+    "CombInstrumentID": "string",
+    "LegID": "int",
+    "LegInstrumentID": "string",
+    "Direction": "char",
+    "LegMultiple": "int",
+    "ImplyLevel": "int",
+}
+
+CThostFtdcQryCombLegField = {
+    "LegInstrumentID": "string",
+}
+
+CThostFtdcInputOffsetSettingField = {
+    "BrokerID": "string",
+    "InvestorID": "string",
+    "InstrumentID": "string",
+    "UnderlyingInstrID": "string",
+    "ProductID": "string",
+    "OffsetType": "char",
+    "Volume": "int",
+    "IsOffset": "int",
+    "RequestID": "int",
+    "UserID": "string",
+    "ExchangeID": "string",
+    "IPAddress": "string",
+    "MacAddress": "string",
+}
+
+CThostFtdcOffsetSettingField = {
+    "BrokerID": "string",
+    "InvestorID": "string",
+    "InstrumentID": "string",
+    "UnderlyingInstrID": "string",
+    "ProductID": "string",
+    "OffsetType": "char",
+    "Volume": "int",
+    "IsOffset": "int",
+    "RequestID": "int",
+    "UserID": "string",
+    "ExchangeID": "string",
+    "IPAddress": "string",
+    "MacAddress": "string",
+    "ExchangeInstID": "string",
+    "ExchangeSerialNo": "string",
+    "ExchangeProductID": "string",
+    "ParticipantID": "string",
+    "ClientID": "string",
+    "TraderID": "string",
+    "InstallID": "int",
+    "OrderSubmitStatus": "char",
+    "TradingDay": "string",
+    "SettlementID": "int",
+    "InsertDate": "string",
+    "InsertTime": "string",
+    "CancelTime": "string",
+    "ExecResult": "char",
+    "SequenceNo": "int",
+    "FrontID": "int",
+    "SessionID": "int",
+    "StatusMsg": "string",
+    "ActiveUserID": "string",
+    "BrokerOffsetSettingSeq": "int",
+    "ApplySrc": "char",
+}
+
+CThostFtdcCancelOffsetSettingField = {
+    "BrokerID": "string",
+    "InvestorID": "string",
+    "InstrumentID": "string",
+    "UnderlyingInstrID": "string",
+    "ProductID": "string",
+    "OffsetType": "char",
+    "Volume": "int",
+    "IsOffset": "int",
+    "RequestID": "int",
+    "UserID": "string",
+    "ExchangeID": "string",
+    "IPAddress": "string",
+    "MacAddress": "string",
+    "ExchangeInstID": "string",
+    "ExchangeSerialNo": "string",
+    "ExchangeProductID": "string",
+    "TraderID": "string",
+    "InstallID": "int",
+    "ParticipantID": "string",
+    "ClientID": "string",
+    "OrderActionStatus": "char",
+    "StatusMsg": "string",
+    "ActionLocalID": "string",
+    "ActionDate": "string",
+    "ActionTime": "string",
+}
+
+CThostFtdcQryOffsetSettingField = {
+    "BrokerID": "string",
+    "InvestorID": "string",
+    "ProductID": "string",
+    "OffsetType": "char",
+}
+
+CThostFtdcAddrAppIDRelationField = {
+    "BrokerID": "string",
+    "Address": "string",
+    "DRIdentityID": "int",
+    "AppID": "string",
+}
+
+CThostFtdcQryAddrAppIDRelationField = {
+    "BrokerID": "string",
+}
+
+CThostFtdcWechatUserSystemInfoField = {
+    "BrokerID": "string",
+    "UserID": "string",
+    "WechatCltSysInfoLen": "int",
+    "WechatCltSysInfo": "string",
+    "ClientIPPort": "int",
+    "ClientLoginTime": "string",
+    "ClientAppID": "string",
+    "ClientPublicIP": "string",
+    "ClientLoginRemark": "string",
+}
+
+CThostFtdcInvestorReserveInfoField = {
+    "BrokerID": "string",
+    "UserID": "string",
+    "ReserveInfo": "string",
+}
+
+CThostFtdcQryInvestorDepartmentFlatField = {
+    "BrokerID": "string",
+}
+
+CThostFtdcInvestorDepartmentFlatField = {
+    "BrokerID": "string",
+    "InvestorID": "string",
+    "DepartmentID": "string",
+}
+
+CThostFtdcQryDepartmentUserField = {
+    "BrokerID": "string",
+}
+
+CThostFtdcFrontInfoField = {
+    "FrontAddr": "string",
+    "QryFreq": "int",
+    "FTDPkgFreq": "int",
 }
 

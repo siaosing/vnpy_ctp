@@ -214,6 +214,12 @@ case ONRSPQRYINSTRUMENTCOMMISSIONRATE:
 	break;
 }
 
+case ONRSPQRYUSERSESSION:
+{
+	this->processRspQryUserSession(&task);
+	break;
+}
+
 case ONRSPQRYEXCHANGE:
 {
 	this->processRspQryExchange(&task);
@@ -775,6 +781,204 @@ case ONRSPQRYRISKSETTLEINVSTPOSITION:
 case ONRSPQRYRISKSETTLEPRODUCTSTATUS:
 {
 	this->processRspQryRiskSettleProductStatus(&task);
+	break;
+}
+
+case ONRSPQRYSPBMFUTUREPARAMETER:
+{
+	this->processRspQrySPBMFutureParameter(&task);
+	break;
+}
+
+case ONRSPQRYSPBMOPTIONPARAMETER:
+{
+	this->processRspQrySPBMOptionParameter(&task);
+	break;
+}
+
+case ONRSPQRYSPBMINTRAPARAMETER:
+{
+	this->processRspQrySPBMIntraParameter(&task);
+	break;
+}
+
+case ONRSPQRYSPBMINTERPARAMETER:
+{
+	this->processRspQrySPBMInterParameter(&task);
+	break;
+}
+
+case ONRSPQRYSPBMPORTFDEFINITION:
+{
+	this->processRspQrySPBMPortfDefinition(&task);
+	break;
+}
+
+case ONRSPQRYSPBMINVESTORPORTFDEF:
+{
+	this->processRspQrySPBMInvestorPortfDef(&task);
+	break;
+}
+
+case ONRSPQRYINVESTORPORTFMARGINRATIO:
+{
+	this->processRspQryInvestorPortfMarginRatio(&task);
+	break;
+}
+
+case ONRSPQRYINVESTORPRODSPBMDETAIL:
+{
+	this->processRspQryInvestorProdSPBMDetail(&task);
+	break;
+}
+
+case ONRSPQRYINVESTORCOMMODITYSPMMMARGIN:
+{
+	this->processRspQryInvestorCommoditySPMMMargin(&task);
+	break;
+}
+
+case ONRSPQRYINVESTORCOMMODITYGROUPSPMMMARGIN:
+{
+	this->processRspQryInvestorCommodityGroupSPMMMargin(&task);
+	break;
+}
+
+case ONRSPQRYSPMMINSTPARAM:
+{
+	this->processRspQrySPMMInstParam(&task);
+	break;
+}
+
+case ONRSPQRYSPMMPRODUCTPARAM:
+{
+	this->processRspQrySPMMProductParam(&task);
+	break;
+}
+
+case ONRSPQRYSPBMADDONINTERPARAMETER:
+{
+	this->processRspQrySPBMAddprocessInterParameter(&task);
+	break;
+}
+
+case ONRSPQRYRCAMSCOMBPRODUCTINFO:
+{
+	this->processRspQryRCAMSCombProductInfo(&task);
+	break;
+}
+
+case ONRSPQRYRCAMSINSTRPARAMETER:
+{
+	this->processRspQryRCAMSInstrParameter(&task);
+	break;
+}
+
+case ONRSPQRYRCAMSINTRAPARAMETER:
+{
+	this->processRspQryRCAMSIntraParameter(&task);
+	break;
+}
+
+case ONRSPQRYRCAMSINTERPARAMETER:
+{
+	this->processRspQryRCAMSInterParameter(&task);
+	break;
+}
+
+case ONRSPQRYRCAMSSHORTOPTADJUSTPARAM:
+{
+	this->processRspQryRCAMSShortOptAdjustParam(&task);
+	break;
+}
+
+case ONRSPQRYRCAMSINVESTORCOMBPOSITION:
+{
+	this->processRspQryRCAMSInvestorCombPosition(&task);
+	break;
+}
+
+case ONRSPQRYINVESTORPRODRCAMSMARGIN:
+{
+	this->processRspQryInvestorProdRCAMSMargin(&task);
+	break;
+}
+
+case ONRSPQRYRULEINSTRPARAMETER:
+{
+	this->processRspQryRULEInstrParameter(&task);
+	break;
+}
+
+case ONRSPQRYRULEINTRAPARAMETER:
+{
+	this->processRspQryRULEIntraParameter(&task);
+	break;
+}
+
+case ONRSPQRYRULEINTERPARAMETER:
+{
+	this->processRspQryRULEInterParameter(&task);
+	break;
+}
+
+case ONRSPQRYINVESTORPRODRULEMARGIN:
+{
+	this->processRspQryInvestorProdRULEMargin(&task);
+	break;
+}
+
+case ONRSPQRYINVESTORPORTFSETTING:
+{
+	this->processRspQryInvestorPortfSetting(&task);
+	break;
+}
+
+case ONRSPQRYINVESTORINFOCOMMREC:
+{
+	this->processRspQryInvestorInfoCommRec(&task);
+	break;
+}
+
+case ONRSPQRYCOMBLEG:
+{
+	this->processRspQryCombLeg(&task);
+	break;
+}
+
+case ONRSPOFFSETSETTING:
+{
+	this->processRspOffsetSetting(&task);
+	break;
+}
+
+case ONRSPCANCELOFFSETSETTING:
+{
+	this->processRspCancelOffsetSetting(&task);
+	break;
+}
+
+case ONRTNOFFSETSETTING:
+{
+	this->processRtnOffsetSetting(&task);
+	break;
+}
+
+case ONERRRTNOFFSETSETTING:
+{
+	this->processErrRtnOffsetSetting(&task);
+	break;
+}
+
+case ONERRRTNCANCELOFFSETSETTING:
+{
+	this->processErrRtnCancelOffsetSetting(&task);
+	break;
+}
+
+case ONRSPQRYOFFSETSETTING:
+{
+	this->processRspQryOffsetSetting(&task);
 	break;
 }
 
